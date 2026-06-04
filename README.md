@@ -13,3 +13,5 @@ This repository contains files to download, preprocess and analyze mIF, bulk RNA
 - sra_to_compressed_fastq.slurm: bash script to convert .sra files to compressed fastq files .fastq.gz needed for cellranger (should get 2 .fastq.gz files representing forward and reverse reads)
 - cellranger_GEX.slurm: bash script to align .fastq.gz files to the human genome (GRCh38) using cellranger
 ### Scripts to process all the samples in conjunction
+- individual_rds-scRNAseq.R: R script to create individual Seurat files for each sample from cellranger outputs
+- 
