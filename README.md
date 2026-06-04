@@ -5,3 +5,6 @@ This repository contains files to download, preprocess and analyze mIF, bulk RNA
 
 ## mIF
 - mIF-SpiderPlot.R: contains the code to create a spider plot based on different cell proportions. Comments contain information on how the proportions were scaled to be plotted on the same plot
+
+## scRNA-seq
+- 
