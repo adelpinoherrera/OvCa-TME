@@ -8,6 +8,16 @@ This repository contains files to download, preprocess and analyze mIF, bulk RNA
 
 ## bulkRNA-seq_code
 ### Scripts needed to align each sample 
+- star_to_bam_countsout.slurm: bash script to align .fastq.gz files to the human genome (GRCh38) using STAR
+### Scripts to process all the samples in conjunction
+- bulkRNAseq.R: R script containing all the analysis done on the bulkRNAseq samples. Briefly:
+  - Pre-processing samples
+  - Normalizing samples and differential gene expression: cancerous vs non-cancerous
+  - Prepare matix for CIBERSORTx: prepare query and reference to upload to CIBERSORTx
+- TCGA-OV_bulkRNAseq.R: R script containing all the analysis done on the TCGA-OV bulkRNAseq samples. Briefly:
+  - Download and pre-processing samples: download TCGA-OC dataset and extracting metadata of interest. The metadata was exported to excel to find treatment-free intervals accurately 
+  - Normalizing samples 
+  - Score samples with the COMET signature
 
 ## scRNA-seq_code
 ### Scripts needed to download and align each sample
@@ -24,5 +34,8 @@ This repository contains files to download, preprocess and analyze mIF, bulk RNA
   -  Extract data for COMET: resistant vs all
   -  Pathway analysis: resistant vs all
   -  Pseudotime analysis of clusters 2 (epithelial cluster) and 3 (fibroblast cluster) using Monocle
+ 
+## bulk RNA- and scRNA-seq pathway analysis 
+- pathway_analysis_CvsN_bulkandscRNAseq.R: R script for pathway analysis for upregulated and downregulated Hallmark pathways in bulk RNA- and scRNA-seq datasets and shared pathway identification
 
 
