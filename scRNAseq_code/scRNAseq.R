@@ -571,9 +571,6 @@ subset_reference_GSE17.norm <- RunPCA(subset_reference_GSE17.norm, features = Va
 # CST7, CD247, TRBC2, HLA-A, RGS1, TSC22D3, A2M, ESM1, CD3D, STK4 
 # SERPINE1, SMAP2, FXYD5, HLA-B, CYTIP, SRGN, LEPROTL1, CD2, TCF4, ADGRL4 
 
-saveRDS(subset_reference_GSE17.norm, paste(outdir2,"OvCa-scRNAseq-Pilot-subset-reference-GSE173682-JoinedLayers-PostPCA.rds"))
-
-
 #delete the numbers before the cell type on the metadata table 
 metadata_GSE173682$cell.type
 # [1] "9-Fibroblast"             "3-Epithelial cell"        "4-Fibroblast"             "17-B cell"               
@@ -598,7 +595,7 @@ table(subset_reference_GSE17.norm$cell.type)
 # 192                   308                   334                  5743                  3597                  1947 
 # NK cell                T cell 
 # 418                  1107
-
+saveRDS(subset_reference_GSE17.norm, paste(outdir2,"OvCa-scRNAseq-Pilot-subset-reference-GSE173682-JoinedLayers-PostPCA-withCellTypes.rds"))
 #downsample to have the sample number of cells for each cell type, if not singleR is going to favor the label for the most amount of cells
 Idents(subset_reference_GSE17.norm) <- "cell.type"
 subset_reference_GSE17.norm.balanced <- subset(subset_reference_GSE17.norm, downsample = 192)
