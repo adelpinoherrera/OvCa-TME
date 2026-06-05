@@ -990,6 +990,7 @@ dev.off()
 
 counts.sensitivity <- as.data.frame(table(ovcaH$predicted.response, ovcaH$predicted.cellType))
 write.csv(counts.diagnosis, paste(outdir3, 'Allcounts_perSensitivity_perPredicted.CellType.csv'))
+saveRDS(ovcaH, paste(outdir3, "OvCa-scRNAseq-ovca-JoinedLayers_ALL-PostUMAPmodel_withHarmony_withCellTypes ANDPredictedResponseANDcellTypes.rds", sep = ""))
 
 ###looked at this table(ovcaH$predicted.response, ovcaH$predicted.cellType, ovcaH$stage)
 #to get sensitive vs resistant proportions and then cell type proportions based on sensitive and resistant for each compartment
