@@ -34,8 +34,9 @@ This repository contains files to download, preprocess and analyze mIF, bulk RNA
   -  Extract data for COMET: resistant vs all
   -  Pathway analysis: resistant vs all
   -  Pseudotime analysis of clusters 2 (epithelial cluster) and 3 (fibroblast cluster) using Monocle
- 
+
 ## bulk RNA- and scRNA-seq pathway analysis 
 - pathway_analysis_CvsN_bulkandscRNAseq.R: R script for pathway analysis for upregulated and downregulated Hallmark pathways in bulk RNA- and scRNA-seq datasets and shared pathway identification
 
-
+## Mathematical modeling 
+- Mathematical-Modeling.ipynb: Julia script for parameterization of logistic growth models for sensitive and resistant cells under standard and M2 TAM conditions
