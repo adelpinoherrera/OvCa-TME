@@ -18,4 +18,4 @@ module load cellranger/8.0.0
 cellranger multi \
   --id=cellranger_multi_tutorial \
   --localcores=16 \
-  --csv=/blue/ferrallm/00_data/single-cell/OvCa/GE7897-MFerral/1_PB/PB_multi_config_8.0.csv 
+  --csv=/blue/ferrallm/00_data/single-cell/OvCa/GE7897-MFerral/UF_1/UF_1_multi_config_8.0.csv 
